@@ -3,6 +3,10 @@ const server = express();
 
 server.use(express.json());
 
+server.get('/', (req, res) => {
+  res.send('I sure hope this is what we were supposed to deploy')
+})
+
 server.get('/api/users', (req, res) => {
   res.send([])
 });
